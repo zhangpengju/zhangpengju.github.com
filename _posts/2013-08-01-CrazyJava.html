@@ -1,7 +1,13 @@
 ---
 layout:default
-title:java学习笔记
+title:java学习笔记（异常处理）
 ---
 <h2>{{page.title}}</h2>
 <p>java的异常处理机制</p>
+<div>
+	Java异常处理分为运行时异常和checked异常。运行时异常提前无法预知，只有程序运行时才会抛出异常，如数组越界等；checked异常则需要在程序编写过程中就处理，如文件输入输出等，用try...catch...finally来处理。
+</div>
+<div>
+	注：finally中的程序块始终会运行，即使try中已经return处理。但有一种情况finally中程序不会再运行：try中遇到System.exit(0)，该语句将停止当前线程，而finally并不能使已经死亡的线程复活。
+</div>
 <p>{{page.date|date_to_string}}</p>
